@@ -1,0 +1,12 @@
+# Ignore compiled binary outputs
+server_go
+server_c
+
+# Ignore Rust build artifacts
+rust_test/target/
+
+# Ignore Python virtual environments or system caches
+__pycache__/
+*.pyc
+.venv/
+venv/
