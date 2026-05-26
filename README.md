@@ -35,7 +35,7 @@ To maintain a strict, scientifically controlled environment, the client and serv
 
 ---
 
-## 📈 Aggregated Empirical Data
+## Aggregated Empirical Data
 
 ### Throughput (Requests Per Second)
 
@@ -61,7 +61,7 @@ To maintain a strict, scientifically controlled environment, the client and serv
 
 ---
 
-## 🔍 Deep Technical Analysis
+##  Technical Analysis
 
 ### 1. The Raw Efficiency Winner
 Under **Light Load (10 Connections)**, we capture pure runtime and architectural overhead before physical network constraints apply. **Rust (Axum)** won the absolute speed test with a P99 tail latency of **$580\mu\text{s}$**. C closely trailed at $635\mu\text{s}$, and Go landed at $673\mu\text{s}$. Python came in last but put up an impressive sub-millisecond response time ($930\mu\text{s}$) due to the efficiency of Starlette beneath FastAPI.
@@ -78,8 +78,8 @@ The compiled servers successfully maxed out **99.4% of the Raspberry Pi 5’s ph
 At 1,000 connections, Python's P99 latency ($148.01\text{ms}$) superficially appears better than Rust's ($222.79\text{ms}$). This is a classic benchmarking illusion. Because Rust, C, and Go were pulling 5.5x more data through the network interface than Python, they completely filled the Linux Kernel's network socket buffers. Requests were forced to wait in an OS-level queue. Python never ran fast enough to fill the network card, keeping its buffer short, but it buckled under the processing overhead, resulting in **603 timeout socket failures**.
 
 ---
-## 🚀 Execution Commands (Client Side)
-Run these commands from the external testing machine targeting the Pi's local address:
+## Execution Commands (Client Side)
+Run these commands from the external testing machine targeting the server's local address:
 
 ```bash
 # Light Load
