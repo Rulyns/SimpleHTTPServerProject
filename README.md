@@ -46,6 +46,8 @@ To maintain a strict, scientifically controlled environment, the client and serv
 | **C (libmicrohttpd)**| 17,137.20 RPS | 56,851.35 RPS | 55,898.00 RPS |
 | **Rust (Axum)** | 18,933.25 RPS | **56,959.75 RPS** | 56,465.33 RPS |
 
+![Throughput Graph](Images/Throughput.png)
+
 ### Latency Profiles (Average vs. P99 Tail)
 
 | Language | Light (Avg / P99) | Medium (Avg / P99) | Heavy (Avg / P99) |
@@ -54,6 +56,8 @@ To maintain a strict, scientifically controlled environment, the client and serv
 | **Go (StdLib)** | $477.63\mu\text{s} \ / \ 673.00\mu\text{s}$ | $1.75\text{ms} \ / \ 2.48\text{ms}$ | $26.36\text{ms} \ / \ 220.15\text{ms}$ |
 | **C (libmicrohttpd)**| $460.62\mu\text{s} \ / \ 635.00\mu\text{s}$ | $1.74\text{ms} \ / \ 2.04\text{ms}$ | $39.83\text{ms} \ / \ 231.65\text{ms}$ |
 | **Rust (Axum)** | $417.32\mu\text{s} \ / \ 580.00\mu\text{s}$ | $1.74\text{ms} \ / \ 1.93\text{ms}$ | $28.63\text{ms} \ / \ 222.79\text{ms}$ |
+
+![Latency Graph](Images/LatencyConsistency.png)
 
 ---
 
